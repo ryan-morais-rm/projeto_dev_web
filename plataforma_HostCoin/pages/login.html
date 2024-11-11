@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Gerenciador HostCoin</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-b from-yellow-700 to-black min-h-screen flex items-center justify-center">
+
+  <div class="bg-white bg-opacity-90 p-8 rounded-lg shadow-lg max-w-md w-full">
+    <h2 class="text-2xl font-bold text-gray-800 text-center mb-6">Login Gerenciador HostCoin</h2>
+    
+    <form action="#" method="POST" class="space-y-4">
+      <!-- Conta -->
+      <div>
+        <label for="conta" class="block text-sm font-medium text-gray-700">Conta</label>
+        <input type="text" id="conta" name="conta" required
+               class="mt-1 p-2 w-full border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500">
+      </div>
+      
+      <!-- Usuário -->
+      <div>
+        <label for="usuario" class="block text-sm font-medium text-gray-700">Usuário</label>
+        <input type="text" id="usuario" name="usuario" required
+               class="mt-1 p-2 w-full border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500">
+      </div>
+      
+      <!-- Senha -->
+      <div>
+        <label for="senha" class="block text-sm font-medium text-gray-700">Senha</label>
+        <input type="password" id="senha" name="senha" required
+               class="mt-1 p-2 w-full border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500">
+      </div>
+      
+      <!-- Código -->
+      <div>
+        <label for="codigo" class="block text-sm font-medium text-gray-700">Código</label>
+        <input type="text" id="codigo" name="codigo" required
+               class="mt-1 p-2 w-full border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500">
+      </div>
+      
+      <!-- Botão de login -->
+      <button type="submit"
+              class="w-full bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50">
+        Entrar
+      </button>
+    </form>
+
+    <!-- Link de contato -->
+    <div class="text-center mt-4">
+      <a href="mailto:contato@hostcoin.com" class="text-sm text-yellow-600 hover:underline">
+        Entrar em contato com a HostCoin
+      </a>
+    </div>
+  </div>
+  
+</body>
+</html>
