@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plataforma de gerenciamento HostCoin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-color: #1a1a1a;
+    }
+  </style>
+</head>
+<body class="text-gray-300 bg-black">
+
+  <!-- Navbar -->
+  <nav class="bg-orange-600 p-4 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-black"> HostCoin </h1>
+      <ul class="flex space-x-6 text-lg">
+        <li><a href="#dashboard" class="hover:text-white">Dashboard</a></li>
+        <li><a href="#resources" class="hover:text-white">Recursos</a></li>
+        <li><a href="#monitoring" class="hover:text-white">Monitoramento</a></li>
+        <li><a href="#settings" class="hover:text-white">Trading Cripto</a></li>
+        <li><a href="#settings" class="hover:text-white">Configurações</a></li>
+      </ul>
+      <button class="bg-black text-orange-500 px-4 py-2 rounded hover:bg-orange-700">
+        Logout
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="bg-orange-700 text-black py-16">
+    <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-4">Homepage Geral de Administração</h2>
+      <p class="text-lg mb-6">Uma solução livre e moderna</p>
+      <a href="#dashboard" class="bg-black text-orange-500 px-6 py-3 rounded hover:bg-orange-800">
+        Entrar na Rede
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto my-12 space-y-16">
+
+    <!-- Dashboard -->
+    <section id="dashboard" class="text-center">
+      <h2 class="text-3xl font-bold mb-4 text-orange-500">Dashboard</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="bg-orange-600 p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold">Hosts Primários</h3>
+          <p>4 Ativos</p>
+        </div>
+
+        <div class="bg-orange-600 p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold">Hosts Secundários</h3>
+            <p>2 Ativos</p>
+          </div>
+        
+        <div class="bg-orange-600 p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold">Estabilidade da Blockchain</h3>
+          <p>100%</p>
+        </div>
+
+        <div class="bg-orange-600 p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold">Aplicações Ativas</h3>
+          <p>2</p>
+        </div>
+        
+        <div class="bg-orange-600 p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold">Criptomoedas disponíveis</h3>
+            <p>100</p>
+        </div>
+
+        <div class="bg-orange-600 p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold">Alertas</h3>
+          <p>0 críticos</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Recursos -->
+    <section id="resources">
+      <h2 class="text-3xl font-bold mb-4 text-orange-500 text-center">Recursos</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-orange-700 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-semibold">Gerenciar Recursos</h3>
+          <p class="mt-4">Visualize como CPU, memória, I/O da rede está rendendo.</p>
+          <button class="mt-4 bg-black text-orange-500 px-4 py-2 rounded hover:bg-orange-900">
+            Gerenciar
+          </button>
+        </div>
+        <div class="bg-orange-700 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-semibold">Escalabilidade</h3>
+          <p class="mt-4">Consulte quantos nós podem ser adicionados no momento.</p>
+          <button class="mt-4 bg-black text-orange-500 px-4 py-2 rounded hover:bg-orange-900">
+            Configurar
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="governance">
+        <h2 class="text-3xl font-bold mb-4 text-orange-500 text-center">Acessibilidade</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-orange-700 p-6 rounded-lg shadow-md">
+            <h3 class="text-2xl font-semibold">Acessar página de governança 2</h3>
+            <p class="mt-4">Visualização de status, reclamações, sugestões dos Hosts PRIMÁRIOS.</p>
+            <button class="mt-4 bg-black text-orange-500 px-4 py-2 rounded hover:bg-orange-900">
+              Consultar
+            </button>
+          </div>
+          <div class="bg-orange-700 p-6 rounded-lg shadow-md">
+            <h3 class="text-2xl font-semibold">Página de governança 2</h3>
+            <p class="mt-4">Visualização de solicitações, feedback e suporte para os Hosts SECUNDÁRIOS.</p>
+            <button class="mt-4 bg-black text-orange-500 px-4 py-2 rounded hover:bg-orange-900">
+              Consultar
+            </button>
+          </div>
+        </div>
+      </section>
+
+    <!-- Monitoramento -->
+    <section id="monitoring" class="text-center">
+      <h2 class="text-3xl font-bold mb-4 text-orange-500">Monitoramento</h2>
+      <p class="mb-6">Acompanhe o status em tempo real de suas aplicações e infraestrutura.</p>
+      <img src="https://via.placeholder.com/600x300" alt="Gráfico de Monitoramento" class="mx-auto rounded-lg">
+    </section>
+
+    <!-- Configurações -->
+    <section id="settings">
+      <h2 class="text-3xl font-bold mb-4 text-orange-500 text-center">Configurações</h2>
+      <div class="bg-orange-800 p-6 rounded-lg shadow-md">
+        <h3 class="text-2xl font-semibold">Configurações Gerais</h3>
+        <p class="mt-4">Ajuste permissões, atualizações e preferências do sistema.</p>
+        <button class="mt-4 bg-black text-orange-500 px-4 py-2 rounded hover:bg-orange-900">
+          Alterar Configurações
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-orange-600 text-center py-6">
+    <p>&copy; 2024 HostCoin. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>

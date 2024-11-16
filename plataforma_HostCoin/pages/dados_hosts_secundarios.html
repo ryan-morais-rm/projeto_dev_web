@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dados dos Hosts Secundários</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-color: #1a1a1a;
+    }
+  </style>
+</head>
+<body class="text-gray-300 bg-black">
+
+  <!-- Header -->
+  <header class="bg-orange-600 py-4">
+    <div class="container mx-auto text-center">
+      <h1 class="text-3xl font-bold text-black">Hosts Secundários - Dados Cadastrados</h1>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto my-8">
+    <div class="overflow-x-auto">
+      <table class="table-auto w-full border-collapse bg-gray-800 rounded-lg shadow-lg">
+        <thead class="bg-orange-700 text-gray-100">
+          <tr>
+            <th class="px-4 py-2">Empresa/Cliente</th>
+            <th class="px-4 py-2">CNPJ/CPF</th>
+            <th class="px-4 py-2">Contato</th>
+            <th class="px-4 py-2">Endereço</th>
+            <th class="px-4 py-2">Serviços Oferecidos</th>
+            <th class="px-4 py-2">Recursos sendo usados</th>
+            <th class="px-4 py-2">Política de Privacidade e Conformidade</th>
+            <th class="px-4 py-2">Status na Rede</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Exemplo de Host Secundário -->
+          <tr class="border-b border-gray-600 hover:bg-gray-700">
+            <td class="px-4 py-2 text-center">Empresa FastDrive</td>
+            <td class="px-4 py-2 text-center">12.345.678/0001-90</td>
+            <td class="px-4 py-2 text-center">
+              <ul class="list-disc list-inside">
+                <li>Nome: João Silva</li>
+                <li>E-mail: contato@fastdrive.com</li>
+                <li>Telefone: +55 (11) 91234-5678</li>
+              </ul>
+            </td>
+            <td class="px-4 py-2 text-center">Rua Exemplo, 123, São Paulo, Brasil</td>
+            <td class="px-4 py-2 text-center">
+              <ul class="list-disc list-inside">
+                <li>Venda de carros</li>
+                <li>Aluguel de carros</li>
+              </ul>
+            </td>
+            <td class="px-4 py-2 text-center">
+              <ul class="list-disc list-inside">
+                <li>RAM: 128 GB</li>
+                <li>CPU: 64 núcleos</li>
+                <li>GPU: NVIDIA A100</li>
+                <li>Armazenamento: 10 TB</li>
+              </ul>
+            </td>
+            <td class="px-4 py-2 text-center">Conforme com LGPD, GDPR</td>
+            <td class="px-4 py-2 text-center">
+              <span class="bg-green-500 text-black px-2 py-1 rounded">Ativo</span>
+            </td>
+          </tr>
+          <!-- Outro exemplo -->
+          <tr class="border-b border-gray-600 hover:bg-gray-700">
+            <td class="px-4 py-2 text-center">Cliente VibeStream</td>
+            <td class="px-4 py-2 text-center">987.654.321-00</td>
+            <td class="px-4 py-2 text-center">
+              <ul class="list-disc list-inside">
+                <li>Nome: Ana Souza</li>
+                <li>E-mail: vibe@stream.com</li>
+                <li>Telefone: +55 (21) 93456-7890</li>
+              </ul>
+            </td>
+            <td class="px-4 py-2 text-center">Avenida Central, 456, Rio de Janeiro, Brasil</td>
+            <td class="px-4 py-2 text-center">
+              <ul class="list-disc list-inside">
+                <li>Streaming de Mídia</li>
+              </ul>
+            </td>
+            <td class="px-4 py-2 text-center">
+              <ul class="list-disc list-inside">
+                <li>RAM: 64 GB</li>
+                <li>CPU: 32 núcleos</li>
+                <li>GPU: NVIDIA RTX 3090</li>
+                <li>Armazenamento: 5 TB</li>
+              </ul>
+            </td>
+            <td class="px-4 py-2 text-center">Conforme com LGPD, GDPR</td>
+            <td class="px-4 py-2 text-center">
+              <span class="bg-green-500 text-black px-2 py-1 rounded">Ativo</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-orange-600 text-center py-6">
+    <p>&copy; 2024 Blockchain Network. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>

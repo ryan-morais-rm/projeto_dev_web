@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plataforma de Trading - HostCoin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-color: #1a1a1a;
+    }
+  </style>
+</head>
+<body class="text-gray-300 bg-black">
+
+  <!-- Header -->
+  <header class="bg-orange-600 py-4">
+    <div class="container mx-auto text-center">
+      <h1 class="text-3xl font-bold text-black">Trading HostCoin</h1>
+      <p class="text-lg text-gray-100">Negocie recursos computacionais com criptomoedas</p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto my-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+
+    <!-- Cotação da Criptomoeda -->
+    <section>
+      <h2 class="text-2xl font-bold text-orange-500 mb-4">Cotação da HostCoin</h2>
+      <div class="overflow-x-auto">
+        <table class="table-auto w-full border-collapse bg-gray-800 rounded-lg shadow-lg">
+          <thead class="bg-orange-700 text-gray-100">
+            <tr>
+              <th class="px-4 py-2">Meses</th>
+              <th class="px-4 py-2">Valor (em USD)</th>
+              <th class="px-4 py-2">Variação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-gray-600 hover:bg-gray-700">
+              <td class="px-4 py-2 text-center">Outubro</td>
+              <td class="px-4 py-2 text-center">$1.00</td>
+              <td class="px-4 py-2 text-center">+5%</td>
+            </tr>
+            <tr class="border-b border-gray-600 hover:bg-gray-700">
+              <td class="px-4 py-2 text-center">Novembro</td>
+              <td class="px-4 py-2 text-center">$1.05</td>
+              <td class="px-4 py-2 text-center">+3%</td>
+            </tr>
+            <tr class="border-b border-gray-600 hover:bg-gray-700">
+              <td class="px-4 py-2 text-center">Dezembro</td>
+              <td class="px-4 py-2 text-center">$1.08</td>
+              <td class="px-4 py-2 text-center">+2%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Conversão de Recursos e Hosts Primários -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+      <!-- Tabela de Conversão -->
+      <div>
+        <h2 class="text-2xl font-bold text-orange-500 mb-4">Conversão - HostCoin para Recursos</h2>
+        <div class="overflow-x-auto">
+          <table class="table-auto w-full border-collapse bg-gray-800 rounded-lg shadow-lg">
+            <thead class="bg-orange-700 text-gray-100">
+              <tr>
+                <th class="px-4 py-2">Criptomoedas</th>
+                <th class="px-4 py-2">Recurso</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-gray-600 hover:bg-gray-700">
+                <td class="px-4 py-2 text-center">4</td>
+                <td class="px-4 py-2 text-center">10 GB de RAM</td>
+              </tr>
+              <tr class="border-b border-gray-600 hover:bg-gray-700">
+                <td class="px-4 py-2 text-center">6</td>
+                <td class="px-4 py-2 text-center">4 CPUs</td>
+              </tr>
+              <tr class="border-b border-gray-600 hover:bg-gray-700">
+                <td class="px-4 py-2 text-center">10</td>
+                <td class="px-4 py-2 text-center">1 GPU</td>
+              </tr>
+              <tr class="border-b border-gray-600 hover:bg-gray-700">
+                <td class="px-4 py-2 text-center">20</td>
+                <td class="px-4 py-2 text-center">1 TB de SSD</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Negociação com Hosts Primários -->
+      <div>
+        <h2 class="text-2xl font-bold text-orange-500 mb-4">Negociar com Hosts Primários</h2>
+        <ul class="space-y-4">
+          <li class="bg-gray-800 px-4 py-2 rounded-lg hover:bg-gray-700">
+            <button class="text-lg text-orange-400 font-bold" onclick="contactHost('Host 1')">Host 1</button>
+          </li>
+          <li class="bg-gray-800 px-4 py-2 rounded-lg hover:bg-gray-700">
+            <button class="text-lg text-orange-400 font-bold" onclick="contactHost('Host 2')">Host 2</button>
+          </li>
+          <li class="bg-gray-800 px-4 py-2 rounded-lg hover:bg-gray-700">
+            <button class="text-lg text-orange-400 font-bold" onclick="contactHost('Host 3')">Host 3</button>
+          </li>
+          <li class="bg-gray-800 px-4 py-2 rounded-lg hover:bg-gray-700">
+            <button class="text-lg text-orange-400 font-bold" onclick="contactHost('Host 4')">Host 4</button>
+          </li>
+        </ul>
+      </div>
+
+    </section>
+
+    <section class="mt-8">
+        <h2 class="text-2xl font-bold text-orange-500 mb-4">Mensagens Recebidas</h2>
+        <div class="bg-gray-800 rounded-lg shadow-lg p-4">
+          <ul class="space-y-4">
+            <li class="bg-gray-900 px-4 py-2 rounded-lg">
+              <p><strong>Host 1:</strong> "Gostaríamos de negociar mais 10 GPUs com um desconto."</p>
+            </li>
+            <li class="bg-gray-900 px-4 py-2 rounded-lg">
+              <p><strong>Host 2:</strong> "Confirme o preço da RAM disponível para esta semana."</p>
+            </li>
+            <li class="bg-gray-900 px-4 py-2 rounded-lg">
+              <p><strong>Host 3:</strong> "Precisamos aumentar a alocação de CPUs. Entre em contato."</p>
+            </li>
+            <li class="bg-gray-900 px-4 py-2 rounded-lg">
+                <p><strong>Host 4:</strong> "Precisamos aumentar a alocação de CPUs. Entre em contato."</p>
+              </li>
+          </ul>
+        </div>
+      </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-orange-600 text-center py-6">
+    <p>&copy; 2024 HostCoin Trading Platform. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    function contactHost(hostName) {
+      const contactInfo = prompt(`Entre em contato com ${hostName}. Insira sua mensagem:`);
+      if (contactInfo) {
+        alert(`Mensagem enviada para ${hostName}: "${contactInfo}"`);
+      }
+    }
+  </script>
+  
+</body>
+</html>
