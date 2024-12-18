@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blockchain Network - Teia</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+    canvas {
+      display: block;
+    }
+  </style>
+</head>
+<body class="bg-gray-900">
+
+  <!-- Informações da página -->
+  <div id="info" class="absolute top-5 left-5 p-4 bg-gray-800 text-white rounded-lg shadow-lg">
+    <h1 class="text-2xl font-bold text-blue-400">HostCoin Blockchain</h1>
+    <p class="mt-2 text-sm">Visualização 3D da rede blockchain em formato de teia. Interaja com os nós movendo o mouse ou clicando nos elementos.</p>
+  </div>
+
+  <script>
+    // Configuração básica da cena
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
+
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+
+    // Adicionando luzes
+    const light = new THREE.PointLight(0xffffff, 1, 100);
+    light.position.set(10, 10, 10);
+    scene.add(light);
+
+    const ambientLight = new THREE.AmbientLight(0x404040, 2); // Luz ambiente
+    scene.add(ambientLight);
+
+    // Criando os nós da rede blockchain
+    const nodes = [];
+    const connections = [];
+    const nodeMaterial = new THREE.MeshStandardMaterial({ color: 0x1e90ff }); // Azul claro
+    const connectionMaterial = new THREE.LineBasicMaterial({ color: 0xd3d3d3 }); // Cinza claro
+
+    const createNode = (x, y, z) => {
+      const geometry = new THREE.SphereGeometry(0.4, 32, 32);
+      const node = new THREE.Mesh(geometry, nodeMaterial);
+      node.position.set(x, y, z);
+      scene.add(node);
+      nodes.push(node);
+    };
+
+    const createConnection = (start, end) => {
+      const geometry = new THREE.BufferGeometry().setFromPoints([start.position, end.position]);
+      const connection = new THREE.Line(geometry, connectionMaterial);
+      scene.add(connection);
+      connections.push(connection);
+    };
+
+    // Criando nós em posições aleatórias dentro de uma esfera
+    const numNodes = 4; // Número de nós
+    const radius = 6; // Raio da esfera imaginária onde os nós são posicionados
+    for (let i = 0; i < numNodes; i++) {
+      const theta = Math.random() * Math.PI * 2; // Ângulo em torno do eixo Y
+      const phi = Math.random() * Math.PI; // Ângulo em torno do eixo X
+      const x = radius * Math.sin(phi) * Math.cos(theta);
+      const y = radius * Math.sin(phi) * Math.sin(theta);
+      const z = radius * Math.cos(phi);
+      createNode(x, y, z);
+    }
+
+    // Conectar todos os nós entre si (estrutura de teia)
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i + 1; j < nodes.length; j++) {
+        createConnection(nodes[i], nodes[j]);
+      }
+    }
+
+    // Animação
+    camera.position.z = 15;
+
+    const animate = () => {
+      requestAnimationFrame(animate);
+
+      // Rotaciona a cena para dar uma visão dinâmica
+      scene.rotation.x += 0.001;
+      scene.rotation.y += 0.002;
+
+      renderer.render(scene, camera);
+    };
+
+    animate();
+
+    // Interatividade básica: destacando nós ao clicar
+    const raycaster = new THREE.Raycaster();
+    const mouse = new THREE.Vector2();
+
+    window.addEventListener('click', (event) => {
+      mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+      mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+      raycaster.setFromCamera(mouse, camera);
+      const intersects = raycaster.intersectObjects(nodes);
+
+      if (intersects.length > 0) {
+        intersects[0].object.material.color.set(0xff6347); // Destaca o nó clicado
+      }
+    });
+
+    // Atualizar o tamanho da tela dinamicamente
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+  </script>
+</body>
+</html>
